@@ -3,5 +3,5 @@ module.exports = {
     title: `Front End Portfolio`,
     siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: [],
-}
+  plugins: [`gatsby-plugin-styled-components`],
+};
