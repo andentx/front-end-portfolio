@@ -4,6 +4,8 @@ import styled from 'styled-components';
 
 import { createGlobalStyle } from 'styled-components';
 
+import Color from '../components/Color';
+
 import PageNavigation from '../components/PageNavigation';
 import PageHeader from '../components/PageHeader';
 import PageFooter from '../components/PageFooter';
@@ -51,6 +53,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <GlobalReset />
+      <Color />
       <PageContainer>
         <PageHeader />
         <PageNavigation />
