@@ -45,8 +45,10 @@ const GlobalReset = createGlobalStyle`
  `;
 
 const PageContainer = styled.div`
-  background-color: darkred;
+  background-color: orange;
   color: white;
+
+  min-height: 100vh;
 `;
 
 const Layout = ({ children }) => {
