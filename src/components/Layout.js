@@ -49,6 +49,24 @@ const PageContainer = styled.div`
   color: white;
 
   min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const MainContent = styled.main`
+  background-color: yellow;
+  color: black;
+
+  width: 100%;
+  max-width: 1200px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  flex-grow: 1;
 `;
 
 const Layout = ({ children }) => {
@@ -59,7 +77,7 @@ const Layout = ({ children }) => {
       <PageContainer>
         <PageHeader />
         <PageNavigation />
-        {children}
+        <MainContent>{children}</MainContent>
         <PageFooter />
       </PageContainer>
     </>
