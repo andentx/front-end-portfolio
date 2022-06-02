@@ -1,7 +1,15 @@
 import * as React from 'react';
 
+import Layout from '../components/Layout';
+
 const Page = () => {
-  return <h1>Another Page</h1>;
+  return (
+    <>
+      <Layout>
+        <h2>Another Page</h2>
+      </Layout>
+    </>
+  );
 };
 
 export default Page;
