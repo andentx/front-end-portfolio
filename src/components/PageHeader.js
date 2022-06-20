@@ -2,6 +2,9 @@ import * as React from 'react';
 
 import styled from 'styled-components';
 
+import PageHeaderLogo from './PageHeaderLogo';
+import PageNavigation from './PageNavigation';
+
 const Header = styled.header`
   background-color: yellow;
   color: black;
@@ -20,7 +23,8 @@ const Header = styled.header`
 const PageHeader = () => {
   return (
     <Header>
-      <h2>Page Header</h2>
+      <PageHeaderLogo />
+      <PageNavigation />
     </Header>
   );
 };
