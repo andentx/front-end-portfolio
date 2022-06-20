@@ -1,10 +1,29 @@
 import * as React from 'react';
 
+import styled from 'styled-components';
+
+const Footer = styled.footer`
+  background-color: yellow;
+  color: black;
+
+  height: 4rem;
+  width: 100%;
+  max-width: 1200px;
+
+  padding: 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
 const PageFooter = () => {
   return (
-    <div>
-      <h2>Page Footer</h2>
-    </div>
+    <Footer>
+      <p>footer link</p>
+      <p>footer link</p>
+      <p>footer link</p>
+    </Footer>
   );
 };
 
