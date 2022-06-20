@@ -6,7 +6,6 @@ import { createGlobalStyle } from 'styled-components';
 
 import Color from '../components/Color';
 
-import PageNavigation from '../components/PageNavigation';
 import PageHeader from '../components/PageHeader';
 import PageFooter from '../components/PageFooter';
 
@@ -56,7 +55,7 @@ const PageContainer = styled.div`
 `;
 
 const MainContent = styled.main`
-  background-color: yellow;
+  background-color: lightgrey;
   color: black;
 
   width: 100%;
@@ -76,7 +75,6 @@ const Layout = ({ children }) => {
       <Color />
       <PageContainer>
         <PageHeader />
-        <PageNavigation />
         <MainContent>{children}</MainContent>
         <PageFooter />
       </PageContainer>
