@@ -5,7 +5,8 @@ import { createGlobalStyle } from 'styled-components';
 const GlobalColor = createGlobalStyle`
  html,
  body {
-     background-color: darkred;
+     background-color: darkslategrey;
+     color: antiquewhite;
  }
  `;
 

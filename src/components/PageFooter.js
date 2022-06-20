@@ -3,9 +3,6 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 const Footer = styled.footer`
-  background-color: yellow;
-  color: black;
-
   height: 4rem;
   width: 100%;
   max-width: 1200px;

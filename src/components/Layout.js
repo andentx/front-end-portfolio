@@ -44,9 +44,6 @@ const GlobalReset = createGlobalStyle`
  `;
 
 const PageContainer = styled.div`
-  background-color: orange;
-  color: white;
-
   min-height: 100vh;
 
   display: flex;

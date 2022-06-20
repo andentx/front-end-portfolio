@@ -3,8 +3,6 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 const NavigationContainer = styled.div`
-  background-color: green;
-
   height: 100%;
 
   display: flex;
@@ -12,9 +10,6 @@ const NavigationContainer = styled.div`
 `;
 
 const NavItem = styled.div`
-  background-color: blue;
-  color: white;
-
   margin-left: 10px;
 
   display: flex;
