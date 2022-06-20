@@ -1,10 +1,19 @@
 import * as React from 'react';
 
+import styled from 'styled-components';
+
+const NavigationContainer = styled.div`
+  background-color: green;
+
+  height: 100%;
+  aspect-ratio: 16/9;
+`;
+
 const PageNavigation = () => {
   return (
-    <div>
-      <h2>Page Navigation</h2>
-    </div>
+    <>
+      <NavigationContainer></NavigationContainer>
+    </>
   );
 };
 
