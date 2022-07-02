@@ -3,9 +3,19 @@ import { useState } from 'react';
 
 import { Link } from 'gatsby';
 
-import styled from 'styled-components';
+import styled, { createGlobalStyle } from 'styled-components';
 
 import { openIcon, closeIcon } from './NavIcon.module.css';
+
+const Global = createGlobalStyle`
+ @media screen and (max-width: 700px) {
+     html,
+     body {
+         max-height: ${({ isOpen }) => (isOpen ? '100vh' : 'none')};
+         overflow-y: ${({ isOpen }) => (isOpen ? 'hidden' : 'auto')};
+     }
+ }
+ `;
 
 const DesktopNavigation = styled.nav`
   background-color: orange;
@@ -91,6 +101,22 @@ const LinkPanel = styled.div`
   background-color: darkblue;
   height: 100%;
   width: 70%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    background-color: purple;
+  }
+  li {
+    background-color: pink;
+    margin-bottom: 2rem;
+  }
+  a {
+    font-size: 2rem;
+  }
 `;
 
 const PageNavigation = () => {
@@ -117,6 +143,8 @@ const PageNavigation = () => {
 
   return (
     <>
+      <Global isOpen={isOpen} />
+
       <DesktopNavigation>
         <ul>
           {navLinks.map((link) => (
@@ -135,7 +163,17 @@ const PageNavigation = () => {
 
       <MobileNavigation isOpen={isOpen}>
         <ClosePanel onClick={toggleMenu} />
-        <LinkPanel />
+        <LinkPanel>
+          <ul>
+            {navLinks.map((link) => (
+              <li key={link.id}>
+                <Link to={link.url} activeClassName='selected'>
+                  {link.text}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </LinkPanel>
       </MobileNavigation>
     </>
   );
