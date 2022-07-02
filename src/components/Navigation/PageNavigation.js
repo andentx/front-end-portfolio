@@ -65,8 +65,6 @@ const MobileNavigationMenuIcon = styled.button`
 `;
 
 const MobileNavigation = styled.div`
-  background-color: green;
-
   position: fixed;
   top: 0;
   right: 0;
@@ -85,7 +83,6 @@ const MobileNavigation = styled.div`
 `;
 
 const ClosePanel = styled.div`
-  background-color: lightblue;
   height: 100%;
   width: 30%;
 `;
@@ -137,7 +134,7 @@ const PageNavigation = () => {
       </MobileNavigationMenuIcon>
 
       <MobileNavigation isOpen={isOpen}>
-        <ClosePanel />
+        <ClosePanel onClick={toggleMenu} />
         <LinkPanel />
       </MobileNavigation>
     </>
