@@ -2,45 +2,46 @@ import * as React from 'react';
 
 import styled from 'styled-components';
 
-const NavigationContainer = styled.div`
+const DesktopNavigation = styled.nav`
   background-color: orange;
 
   height: 100%;
 
   display: flex;
   align-items: center;
-`;
 
-const NavItem = styled.div`
-  background-color: yellow;
+  ul {
+    background-color: yellow;
 
-  margin-left: 10px;
+    height: 100%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
 
-  line-height: 0.6;
+    li {
+      background-color: green;
 
-  p {
-    background-color: green;
+      margin-left: 10px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      line-height: 0.6;
+    }
   }
 `;
 
 const PageNavigation = () => {
   return (
     <>
-      <NavigationContainer>
-        <NavItem>
-          <p>nav</p>
-        </NavItem>
-        <NavItem>
-          <p>nav</p>
-        </NavItem>
-        <NavItem>
-          <p>nav</p>
-        </NavItem>
-      </NavigationContainer>
+      <DesktopNavigation>
+        <ul>
+          <li>nav</li>
+          <li>nav</li>
+          <li>nav</li>
+        </ul>
+      </DesktopNavigation>
     </>
   );
 };
