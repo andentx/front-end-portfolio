@@ -57,6 +57,26 @@ const MobileNavigationMenuIcon = styled.button`
   aspect-ratio: 1/1;
   border: none;
 
+  z-index: 100;
+
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
+`;
+
+const MobileNavigation = styled.div`
+  background-color: green;
+
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+
+  transition: transform 300ms;
+
+  transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
+
   @media screen and (min-width: 700px) {
     display: none;
   }
@@ -101,6 +121,8 @@ const PageNavigation = () => {
       <MobileNavigationMenuIcon onClick={toggleMenu}>
         <div className={`${isOpen ? closeIcon : openIcon}`}></div>
       </MobileNavigationMenuIcon>
+
+      <MobileNavigation isOpen={isOpen}></MobileNavigation>
     </>
   );
 };
