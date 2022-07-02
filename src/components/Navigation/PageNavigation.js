@@ -18,24 +18,18 @@ const Global = createGlobalStyle`
  `;
 
 const DesktopNavigation = styled.nav`
-  background-color: orange;
-
   height: 100%;
 
   display: flex;
   align-items: center;
 
   ul {
-    background-color: yellow;
-
     height: 100%;
 
     display: flex;
     align-items: center;
 
     li {
-      background-color: green;
-
       margin-left: 10px;
 
       display: flex;
@@ -46,12 +40,16 @@ const DesktopNavigation = styled.nav`
 
       a {
         color: antiquewhite;
+        transition: color 200ms;
       }
       a:hover {
-        color: antiquewhite;
+        color: hsl(34, 78%, 81%);
       }
       a:active {
-        color: antiquewhite;
+        color: hsl(34, 78%, 81%);
+      }
+      .selected {
+        color: hsl(34, 78%, 81%);
       }
     }
   }
@@ -62,10 +60,12 @@ const DesktopNavigation = styled.nav`
 `;
 
 const MobileNavigationMenuIcon = styled.button`
-  background-color: orange;
   height: 100%;
   aspect-ratio: 1/1;
   border: none;
+
+  background: transparent;
+  cursor: pointer;
 
   z-index: 100;
 
@@ -98,7 +98,10 @@ const ClosePanel = styled.div`
 `;
 
 const LinkPanel = styled.div`
-  background-color: darkblue;
+  background-color: hsla(180, 25%, 15%, 0.9);
+
+  backdrop-filter: blur(1rem);
+
   height: 100%;
   width: 70%;
 
@@ -108,14 +111,25 @@ const LinkPanel = styled.div`
   align-items: center;
 
   ul {
-    background-color: purple;
   }
+
   li {
-    background-color: pink;
     margin-bottom: 2rem;
   }
+
   a {
     font-size: 2rem;
+    color: antiquewhite;
+  }
+  a:hover {
+    color: hsl(34, 78%, 81%);
+  }
+  a:active {
+    color: hsl(34, 78%, 81%);
+  }
+
+  .selected {
+    color: hsl(34, 78%, 81%);
   }
 `;
 
@@ -137,7 +151,7 @@ const PageNavigation = () => {
     {
       id: 3,
       text: 'contact',
-      url: '#contact',
+      url: '/#contact',
     },
   ];
 

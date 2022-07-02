@@ -1,5 +1,5 @@
 .open-icon::before {
-  background-color: yellow;
+  background-color: antiquewhite;
 
   content: '';
 
@@ -13,14 +13,14 @@
 }
 
 .open-icon {
-  background-color: yellow;
+  background-color: antiquewhite;
 
   height: 6.4px;
   width: 100%;
 }
 
 .open-icon::after {
-  background-color: yellow;
+  background-color: antiquewhite;
 
   content: '';
 
@@ -34,7 +34,7 @@
 }
 
 .close-icon {
-  background-color: yellow;
+  background-color: antiquewhite;
 
   height: 6.4px;
   width: 100%;
@@ -43,7 +43,7 @@
 }
 
 .close-icon::after {
-  background-color: yellow;
+  background-color: antiquewhite;
 
   content: '';
 
