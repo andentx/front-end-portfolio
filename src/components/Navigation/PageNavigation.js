@@ -167,7 +167,7 @@ const PageNavigation = () => {
           <ul>
             {navLinks.map((link) => (
               <li key={link.id}>
-                <Link to={link.url} activeClassName='selected'>
+                <Link to={link.url} onClick={toggleMenu} activeClassName='selected'>
                   {link.text}
                 </Link>
               </li>
