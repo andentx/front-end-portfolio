@@ -3,6 +3,8 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 const NavigationContainer = styled.div`
+  background-color: orange;
+
   height: 100%;
 
   display: flex;
@@ -10,6 +12,8 @@ const NavigationContainer = styled.div`
 `;
 
 const NavItem = styled.div`
+  background-color: yellow;
+
   margin-left: 10px;
 
   display: flex;
@@ -17,6 +21,10 @@ const NavItem = styled.div`
   justify-content: center;
 
   line-height: 0.6;
+
+  p {
+    background-color: green;
+  }
 `;
 
 const PageNavigation = () => {

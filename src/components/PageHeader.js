@@ -6,6 +6,8 @@ import PageHeaderLogo from './PageHeaderLogo';
 import PageNavigation from './Navigation/PageNavigation';
 
 const Header = styled.header`
+  background-color: darkred;
+
   height: 4rem;
   width: 100%;
   max-width: 1200px;
