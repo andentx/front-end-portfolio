@@ -1,0 +1,34 @@
+.open-icon::before {
+  background-color: yellow;
+
+  content: '';
+
+  display: block;
+
+  height: 6.4px;
+  width: 100%;
+
+  position: relative;
+  bottom: 12.8px;
+}
+
+.open-icon {
+  background-color: yellow;
+
+  height: 6.4px;
+  width: 100%;
+}
+
+.open-icon::after {
+  background-color: yellow;
+
+  content: '';
+
+  display: block;
+
+  height: 6.4px;
+  width: 100%;
+
+  position: relative;
+  top: 6.4px;
+}

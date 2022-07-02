@@ -4,6 +4,8 @@ import { Link } from 'gatsby';
 
 import styled from 'styled-components';
 
+import { openIcon } from './NavIcon.module.css';
+
 const DesktopNavigation = styled.nav`
   background-color: orange;
 
@@ -92,7 +94,9 @@ const PageNavigation = () => {
         </ul>
       </DesktopNavigation>
 
-      <MobileNavigationMenuIcon></MobileNavigationMenuIcon>
+      <MobileNavigationMenuIcon>
+        <div className={openIcon}></div>
+      </MobileNavigationMenuIcon>
     </>
   );
 };
