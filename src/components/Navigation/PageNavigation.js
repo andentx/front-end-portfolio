@@ -1,5 +1,7 @@
 import * as React from 'react';
 
+import { Link } from 'gatsby';
+
 import styled from 'styled-components';
 
 const DesktopNavigation = styled.nav`
@@ -28,6 +30,16 @@ const DesktopNavigation = styled.nav`
       justify-content: center;
 
       line-height: 0.6;
+
+      a {
+        color: antiquewhite;
+      }
+      a:hover {
+        color: antiquewhite;
+      }
+      a:active {
+        color: antiquewhite;
+      }
     }
   }
 `;
@@ -37,9 +49,15 @@ const PageNavigation = () => {
     <>
       <DesktopNavigation>
         <ul>
-          <li>nav</li>
-          <li>nav</li>
-          <li>nav</li>
+          <li>
+            <Link to='/'>home</Link>
+          </li>
+          <li>
+            <Link to='/page'>page</Link>
+          </li>
+          <li>
+            <Link to='/#contact'>contact</Link>
+          </li>
         </ul>
       </DesktopNavigation>
     </>
