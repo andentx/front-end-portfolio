@@ -48,6 +48,17 @@ const DesktopNavigation = styled.nav`
   }
 `;
 
+const MobileNavigationMenuIcon = styled.button`
+  background-color: orange;
+  height: 100%;
+  aspect-ratio: 1/1;
+  border: none;
+
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
+`;
+
 const PageNavigation = () => {
   const navLinks = [
     {
@@ -80,6 +91,8 @@ const PageNavigation = () => {
           ))}
         </ul>
       </DesktopNavigation>
+
+      <MobileNavigationMenuIcon></MobileNavigationMenuIcon>
     </>
   );
 };
