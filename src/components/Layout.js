@@ -12,6 +12,7 @@ import PageFooter from '../components/PageFooter';
 const GlobalReset = createGlobalStyle`
  html,
  body,
+ button,
  header,
  main,
  menu,
