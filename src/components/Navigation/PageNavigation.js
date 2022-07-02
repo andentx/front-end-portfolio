@@ -42,6 +42,10 @@ const DesktopNavigation = styled.nav`
       }
     }
   }
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 `;
 
 const PageNavigation = () => {
