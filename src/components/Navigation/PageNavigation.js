@@ -73,6 +73,8 @@ const MobileNavigation = styled.div`
   height: 100vh;
   width: 100vw;
 
+  display: flex;
+
   transition: transform 300ms;
 
   transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(100%)')};
@@ -80,6 +82,18 @@ const MobileNavigation = styled.div`
   @media screen and (min-width: 700px) {
     display: none;
   }
+`;
+
+const ClosePanel = styled.div`
+  background-color: lightblue;
+  height: 100%;
+  width: 30%;
+`;
+
+const LinkPanel = styled.div`
+  background-color: darkblue;
+  height: 100%;
+  width: 70%;
 `;
 
 const PageNavigation = () => {
@@ -122,7 +136,10 @@ const PageNavigation = () => {
         <div className={`${isOpen ? closeIcon : openIcon}`}></div>
       </MobileNavigationMenuIcon>
 
-      <MobileNavigation isOpen={isOpen}></MobileNavigation>
+      <MobileNavigation isOpen={isOpen}>
+        <ClosePanel />
+        <LinkPanel />
+      </MobileNavigation>
     </>
   );
 };
