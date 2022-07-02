@@ -63,6 +63,10 @@ const MainContent = styled.main`
   align-items: center;
 
   flex-grow: 1;
+
+  h2 {
+    margin-bottom: 1000px;
+  }
 `;
 
 const Layout = ({ children }) => {
