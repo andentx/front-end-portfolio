@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState } from 'react';
 
 import { Link } from 'gatsby';
 
@@ -62,6 +63,9 @@ const MobileNavigationMenuIcon = styled.button`
 `;
 
 const PageNavigation = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   const navLinks = [
     {
       id: 1,
@@ -94,8 +98,8 @@ const PageNavigation = () => {
         </ul>
       </DesktopNavigation>
 
-      <MobileNavigationMenuIcon>
-        <div className={closeIcon}></div>
+      <MobileNavigationMenuIcon onClick={toggleMenu}>
+        <div className={`${isOpen ? closeIcon : openIcon}`}></div>
       </MobileNavigationMenuIcon>
     </>
   );
