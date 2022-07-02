@@ -45,19 +45,35 @@ const DesktopNavigation = styled.nav`
 `;
 
 const PageNavigation = () => {
+  const navLinks = [
+    {
+      id: 1,
+      text: 'home',
+      url: '/',
+    },
+    {
+      id: 2,
+      text: 'page',
+      url: '/page',
+    },
+    {
+      id: 3,
+      text: 'contact',
+      url: '#contact',
+    },
+  ];
+
   return (
     <>
       <DesktopNavigation>
         <ul>
-          <li>
-            <Link to='/'>home</Link>
-          </li>
-          <li>
-            <Link to='/page'>page</Link>
-          </li>
-          <li>
-            <Link to='/#contact'>contact</Link>
-          </li>
+          {navLinks.map((link) => (
+            <li key={link.id}>
+              <Link to={link.url} activeClassName='selected'>
+                {link.text}
+              </Link>
+            </li>
+          ))}
         </ul>
       </DesktopNavigation>
     </>
