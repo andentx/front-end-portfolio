@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 
 import styled from 'styled-components';
 
-import { openIcon } from './NavIcon.module.css';
+import { openIcon, closeIcon } from './NavIcon.module.css';
 
 const DesktopNavigation = styled.nav`
   background-color: orange;
@@ -95,7 +95,7 @@ const PageNavigation = () => {
       </DesktopNavigation>
 
       <MobileNavigationMenuIcon>
-        <div className={openIcon}></div>
+        <div className={closeIcon}></div>
       </MobileNavigationMenuIcon>
     </>
   );

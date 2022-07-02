@@ -32,3 +32,25 @@
   position: relative;
   top: 6.4px;
 }
+
+.close-icon {
+  background-color: yellow;
+
+  height: 6.4px;
+  width: 100%;
+
+  transform: rotate(45deg);
+}
+
+.close-icon::after {
+  background-color: yellow;
+
+  content: '';
+
+  display: block;
+
+  height: 6.4px;
+  width: 100%;
+
+  transform: rotate(90deg);
+}
