@@ -42,6 +42,10 @@ const GlobalReset = createGlobalStyle`
      text-decoration: none;
      scroll-behavior: smooth;
  }
+
+ html {
+    overflow-x: hidden;
+}
  `;
 
 const PageContainer = styled.div`
