@@ -20,7 +20,7 @@ const Global = createGlobalStyle`
 const DesktopNavigation = styled.nav`
   height: 100%;
 
-  display: flex;
+  display: ${({ isOpen }) => (isOpen ? 'none' : 'flex')};
   align-items: center;
 
   ul {
@@ -159,7 +159,7 @@ const PageNavigation = () => {
     <>
       <Global isOpen={isOpen} />
 
-      <DesktopNavigation>
+      <DesktopNavigation isOpen={isOpen}>
         <ul>
           {navLinks.map((link) => (
             <li key={link.id}>
