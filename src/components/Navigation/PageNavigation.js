@@ -95,6 +95,8 @@ const MobileNavigation = styled.div`
 const ClosePanel = styled.div`
   height: 100%;
   width: 30%;
+
+  display: flex;
 `;
 
 const LinkPanel = styled.div`
