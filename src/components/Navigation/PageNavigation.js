@@ -20,7 +20,7 @@ const Global = createGlobalStyle`
 const DesktopNavigation = styled.nav`
   height: 100%;
 
-  display: ${({ isOpen }) => (isOpen ? 'none' : 'flex')};
+  display: flex;
   align-items: center;
 
   ul {
