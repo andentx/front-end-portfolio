@@ -78,7 +78,7 @@ const MobileNavigation = styled.div`
   position: fixed;
   top: 0;
   right: 0;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
 
   display: flex;
